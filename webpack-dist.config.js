@@ -4,7 +4,6 @@ const { spawnSync } = require('child_process');
 const findChrome = require('chrome-finder');
 const DefinePlugin = require('webpack/lib/DefinePlugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const EndWebpackPlugin = require('end-webpack-plugin');
 const { WebPlugin } = require('web-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
@@ -52,15 +51,5 @@ module.exports = {
       filename: '[name]_[contenthash].css',
     }),
     new OptimizeCSSAssetsPlugin(),
-    new EndWebpackPlugin(async () => {
-      // 自定义域名
-      fs.writeFileSync(path.resolve(outputPath, 'CNAME'), 'fm1223.github.io/resume');
-
-      // 调用 Chrome 渲染出 PDF 文件
-      const chromePath = findChrome();
-      spawnSync(chromePath, ['--headless', '--disable-gpu', `--print-to-pdf=${path.resolve(outputPath, 'resume.pdf')}`,
-        ' https://fm1223.github.io/resume' // 这里注意改成你的在线简历的网站
-      ]);
-    }),
   ]
 };
