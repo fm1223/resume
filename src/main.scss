@@ -148,6 +148,7 @@ a {
       text-align: center;
     }
 
+
     h2 {
       display: inline-block;
       font-size: 24px;
@@ -302,6 +303,18 @@ a {
     background-color: #eee;
   }
 
+  .project-title{
+    font-size: 26px;
+    padding: 15px 0 15px;
+    font-weight: 700;
+  }
+
+  .h2-title{
+    font-size: 20px;
+    padding: 0 0 15px 20px;
+    font-weight: 700;
+  }
+
   .section-list {
     padding: 10px 0 5px;
   }
@@ -316,7 +329,7 @@ a {
 
     .item-time {
       display: inline-block;
-      float: left;
+      // float: left;
       width: 25%;
       @media screen and (max-width: 720px) {
         width: 100%;
