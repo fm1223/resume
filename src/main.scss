@@ -12,7 +12,7 @@ $font-family: 'Helvetica Neue', Helvetica, Arial, "Microsoft YaHei", sans-serif;
 
 body {
   color: #333;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
   font-family: $font-family;
   -webkit-font-smoothing: antialiased;
@@ -352,6 +352,12 @@ a {
     margin-bottom: 5px;
   }
 
+  .item-works{
+    margin: 20px 0 0 30px;
+  }
+  .item-position{
+    margin-left: 30px;
+  }
   .item-des {
     margin-bottom: 16px;
   }
@@ -385,6 +391,9 @@ a {
       padding: 0 3px;
       background-color: #f6f6f6;
     }
+  }
+  .section-content > li{
+    margin-bottom: 15px;
   }
 
   .practice {
