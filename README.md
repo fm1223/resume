@@ -39,3 +39,9 @@ npx playwright install chromium
 ```
 
 然后重新运行 `npm run pdf`。
+
+## 自动部署
+
+推送到 `master` 分支后，GitHub Actions 会自动完成依赖安装、生产构建和 GitHub Pages 发布。也可以在仓库的 Actions 页面手动运行 `Deploy to GitHub Pages` 工作流。
+
+首次部署前，需要在仓库的 **Settings > Pages > Build and deployment** 中将 Source 设置为 **GitHub Actions**。部署成功后可通过 `https://fm1223.github.io/resume/` 访问。
